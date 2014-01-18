@@ -1,0 +1,20 @@
+{
+  "uuid": "7178d036-7c82-406c-87e8-fa3101cca659",
+  "shortName": "prompt",
+  "longName": "prompt",
+  "companyName": "Peyton Sherwood",
+  "versionCode": 1,
+  "versionLabel": "1.0.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "capabilities": [
+    "location"
+  ],
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": []
+  }
+}
