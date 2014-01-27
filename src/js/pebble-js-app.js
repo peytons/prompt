@@ -1,6 +1,6 @@
 function shorten(text) {
-    if (!text) {
-        return ""
+    if (!text || text.length < 1) {
+        return " ";
     }
     if (text.length > 20) {
         return text.substring(0,19) + "...";
@@ -24,13 +24,19 @@ function locationSuccess(pos) {
           var appt_name = shorten(nextappt.next_appt_name);
           var route_name = shorten(nextappt.route_name);
           var travel_method = shorten(nextappt.travel_method);
+          var now = Math.round(new Date().getTime()/1000);
+          var leave_in = nextappt.departure_time - now;
+          console.log("deptime : " + nextappt.departure_time);
+          console.log("now     : " + now);
+          console.log("leave in: " + leave_in);
           payload = {
             "next_appt_name": appt_name,
             "next_appt_time": nextappt.next_appt_time,
             "travel_time":    nextappt.travel_time,
             "travel_method":  travel_method,
             "route_name":     route_name,
-            "departure_time": nextappt.departure_time
+            "departure_time": nextappt.departure_time,
+            "leave_in": leave_in
           };
           console.log("sending_payload: " + JSON.stringify(payload));
           Pebble.sendAppMessage(payload);

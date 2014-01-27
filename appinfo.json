@@ -17,7 +17,8 @@
     "travel_time": 2,
     "travel_method": 3,
     "route_name": 4,
-    "departure_time": 5
+    "departure_time": 5,
+    "leave_in": 6
   },
   "resources": {
     "media": []
