@@ -12,7 +12,7 @@ function locationSuccess(pos) {
   var coordinates = pos.coords;
   var response;
   var req = new XMLHttpRequest();
-  var uri = "http://promptserver-env-7chj2mdx77.elasticbeanstalk.com/nextappt?" + "lat=" + coordinates.latitude + "&lon=" + coordinates.longitude + "&pebble_id=1" 
+  var uri = "http://prompt.eps0.net/nextappt?" + "lat=" + coordinates.latitude + "&lon=" + coordinates.longitude + "&pebble_id=1" 
   req.open('GET', uri, true);
   req.onreadystatechange = function(e) { //onload = function(e) {
     if (req.readyState == 4) {
