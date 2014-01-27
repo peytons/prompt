@@ -12,7 +12,12 @@
     "location"
   ],
   "appKeys": {
-    "dummy": 0
+    "next_appt_name": 0,
+    "next_appt_time": 1,
+    "travel_time": 2,
+    "travel_method": 3,
+    "route_name": 4,
+    "departure_time": 5
   },
   "resources": {
     "media": []
